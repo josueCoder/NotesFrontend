@@ -2,6 +2,7 @@
 
 #### **Motores Render**
 Encargados de pasar los archivos a pixeles.
+
 ![](./img/MotoresNavegador.png)
 
 ### **HTML SEMANTICO**
@@ -52,4 +53,52 @@ p:hover::before {
 }
 ```
 ![](./img/PseudoClasesPseudoelementos.png)
+
+
+### **CASCADA Y ESPECIFICIDAD**
+
+### **CASCADA**
+El orden de las instrucciones en CSS importan.
+### **ESPECIFICIDAD**
+Es la manera como el navegado lidia con los conflictos en un archivo CSS.
+`"Entre > especificidad, > es la posibilidad de que sus declaraciones se usen sobre las demas."`
+![](./img/Especificidad.png)
+
+Básicamente, CSS acabará aplicándole los estilos al selector que sea más específico, y podemos determinar su especificidad simplemente haciendo una suma
+
+![](./img/DeterminandoEspecificidad.png)
+
+```
+<head>
+    
+    <style>
+        #platzi{
+            color: red;
+        }
+
+        .master{
+            color blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="plazi" class="master"> Platzi </div>
+</body>
+
+/*Como resultado el elemento tomara el color rojo, devido a que el ID tiene > especificidad.*/
+```
+### **DISPLAY MAS USADOS : BLOACK, INLINE E INLINE BLOCK**
+![](./img/Display.png)
+
+Entender estos tipos de displays es muy importante, ya que a veces estamos tratando de añadirle márgenes a algunos elemenos y por alguna extraña razón no funciona. Pero es sencillo:
+
+***block:*** `Estos elementos ocupan toda la pantalla`, por lo que si quieres agregar otro elemento, este se agregará automáticamente abajo. No importa que tengas poco contenido, el elemento sí o sí va a ocupar toda la pantalla.
+Podemos establecerle un `width, height, margin`
+
+**inline:**` Estos elementos son los que su caja mide exactamente lo mismo que su contenido`. Estos elementos los podemos usar en textos y en lugar de que se agreguen en una nueva línea se agregaran justo al ladito del texto. ❗ Tienen como desventaja que no podemos ponerles márgenes ni tampoco podemos cambiar su tamaño.
+`Hacen caso omiso cuando se añade un width, height o margin`
+
+**inline-block:** `Esto mezcla lo mejor de ambos mundos`. `Podemos tener elementos que no ocupen todo el ancho de la pantalla, sino que ocupen solamente lo que su contenido ocupa`, `pero también vamos a poder darle márgenes y podremos cambiar su tamaño`
+
+
 
