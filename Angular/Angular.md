@@ -82,6 +82,45 @@ Existentes elementos HTML cuya asignacion de valores se realiza a `travez de sus
 <img [src]="person.avatar" alt="">
 
 ```
+#### **Manejo de eventos**
+Para manejar eventos de utiliza `()`
+
+<button disabled="true" `(click)="clickHandler"`>Click Me</button>
+
+```
+======TS=======
+cliclHandler(){
+    alert("Click Angular by RJCY")
+}
+
+changeHandler(event: Event){
+  console.log(event);
+}
+  
+keydownHandler(event : KeyboardEvent){
+  const input= event.target as HTMLInputElement;
+  console.log(input.value)
+}
+
+```
+
+```
+=====HTML=====
+<button disabled="true" `(click)="clickHandler"`>Click Me</button>
+
+<button disabled="true" `(dbclick)="clickHandler"`>Click Me</button>
+
+
+<p>(change) cambios cuando se desenfoca en el input</p>
+<input type="text" [value]="name" (change)="changeHandler($event)">
+
+<p>(keydown) cambios del teclado</p>
+<input type="text" [value]="name" (keydown)="changeHandler($event)">
+ 
+<p>(keydown shif) cuando se realiza atajos del teclado</p>
+<input type="text" [value]="name" (keydown.shift.t)="changeHandler($event)">
+
+```
  
 
 
