@@ -82,7 +82,7 @@ Existentes elementos HTML cuya asignacion de valores se realiza a `travez de sus
 <img [src]="person.avatar" alt="">
 
 ```
-#### **Manejo de eventos**
+#### **Manejo de eventos (Event Binding)**
 Para manejar eventos de utiliza `()`
 
 <button disabled="true" `(click)="clickHandler"`>Click Me</button>
@@ -121,7 +121,21 @@ keydownHandler(event : KeyboardEvent){
 <input type="text" [value]="name" (keydown.shift.t)="changeHandler($event)">
 
 ```
- 
+### **Modelo de reactividad con Signals**
+`Angular Signals` es un sistema que rastrea de forma granular cómo y dónde ocurrio un evento.
+![](./img/signals.png)
+
+`¿Qué son las signals?` Una signal es un envoltorio alrededor de un valor que notifica a los consumidores interesados ​​cuando ese valor cambia.
+El valor de una signal se lee llamando a su función getter, que permite a Angular rastrear dónde se utiliza la signal.
+Las signals pueden ser de escritura o de sólo lectura.
+ ![](./img/signalsAgular.png)
+
+ `los signals son como variables`, pero estos ahora `se crean por medio de una funcion`, de igual manera para accder al valor de que contiene se debe ejecutar sus metodos.
+
+ ```
+ //Se convierte en una señal(variable reactiva)
+  name=signal('Josue');
+ ```
 
 
 
