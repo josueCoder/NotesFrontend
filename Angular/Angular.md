@@ -136,6 +136,16 @@ Las signals pueden ser de escritura o de sólo lectura.
  //Se convierte en una señal(variable reactiva)
   name=signal('Josue');
  ```
+ ```
+ <p>Hola soy {{ name() }}</p>
+ ```
+
+ Modificacion del valor de un signal:
+ 
+ ```
+ //TS
+ this.name.set(newValue)
+ ```
 
 
 
