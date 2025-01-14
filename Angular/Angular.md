@@ -45,6 +45,13 @@ Renderizando variables en el HTML -> **`{{ variable }}`**
 
 ☣️Para usar las etiquetas especiales como `*ng for` debemos importar el `CommonModule`☣️
 
+### Configuraciones de redireccionamiento
+Se debe utilizar el `<router-outlet></router-outlet>` para redireccionamiento hacia los componentes de acuerdo a la configuracion del app.routes
+```
+// app.component.html
+<router-outlet></router-outlet>
+```
+
 **Asignacion de valores a elementos HTML a traves de sus propiedades**
 
 
